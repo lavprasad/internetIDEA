@@ -60,7 +60,16 @@
     var progress = load();
     root.replaceChildren();
     root.append(h("h1", "", "Clear the paper"));
-    root.append(h("p", "lede", "Ten aptitude chapters. Each one has a picture you can move, a short trick, and questions. Miss one, and the next practice leans on that skill."));
+    root.append(h("p", "lede", "Ten chapters. Every lesson and every question has a picture. The shortcuts below are identities: they hold for every question of that kind."));
+
+    var rules = h("section", "card");
+    rules.append(h("h2", "", "Shortcuts that always hold"));
+    var list = document.createElement("ul");
+    course.always.forEach(function (line) {
+      list.append(h("li", "", line));
+    });
+    rules.append(list);
+    root.append(rules);
 
     var weak = L.weakSkills(progress.attempts);
     var band = h("section", "weak");
@@ -90,6 +99,9 @@
     course.chapters.forEach(function (chapter) {
       var report = L.chapterReport(course.questions, progress.attempts, chapter.id);
       var card = h("article", "card");
+      var thumb = h("div", "thumb");
+      window.AptitudeVisuals.thumb(chapter.id, thumb);
+      card.append(thumb);
       card.append(h("h2", "", chapter.title));
       card.append(h("p", "", chapter.blurb));
       var meter = h("div", "meter");
@@ -179,6 +191,9 @@
     var card = h("article", "q-card");
     var chapter = chapterById(next.chapter);
     card.append(h("p", "score", chapter.title));
+    var stage = h("div", "stage");
+    card.append(stage);
+    window.AptitudeVisuals.mount(next.chapter, stage);
     card.append(h("h2", "", next.prompt));
     var choices = h("div", "choices");
     next.choices.forEach(function (choice) {

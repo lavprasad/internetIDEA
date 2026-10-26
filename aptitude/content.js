@@ -11,11 +11,11 @@
         "A rise of r% then a fall of r% always leaves you short by r²/100 percent."
       ],
       tricks: [
-        { skill: "fraction-percent", name: "Common fractions", body: "1/2 = 50%, 1/3 ≈ 33.33%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 3/8 = 37.5%." },
-        { skill: "of-swap", name: "Swap trick", body: "x% of y equals y% of x. 20% of 80 and 80% of 20 are both 16." },
-        { skill: "successive", name: "Successive change", body: "Up a% then down b% multiplies by (1 + a/100)(1 − b/100). Same r both ways: net change = −r²/100 %." },
-        { skill: "reverse-percent", name: "Find the original", body: "If a number becomes N after a rise of r%, original = N / (1 + r/100)." },
-        { skill: "compare", name: "More is not the same as less", body: "If A is 25% more than B, set B to 100 and A to 125. B is 25 short of 125, which is 20%, not 25%." }
+        { skill: "fraction-percent", name: "Fraction table", body: "Always: 1/2=50, 1/3=33⅓, 1/4=25, 1/5=20, 1/6=16⅔, 1/8=12.5, 3/8=37.5. These are definitions, so they do not depend on the question." },
+        { skill: "of-swap", name: "Swap", body: "Always: x% of y = y% of x. It is the same multiplication, x×y/100, written two ways." },
+        { skill: "successive", name: "Successive change", body: "Always: a% then b% is a net change of a + b + ab/100. Write a fall as a negative number. The same r up and down is −r²/100 %, never zero." },
+        { skill: "reverse-percent", name: "Undo a percent", body: "Always: after a rise of r%, original = new ÷ (1 + r/100). After a fall, divide by (1 − r/100). Subtracting r% does not undo it." },
+        { skill: "compare", name: "More versus less", body: "Always: if A is x% more than B, then B is 100x/(100+x) % less than A. 25% more means 20% less the other way, because the base changed." }
       ],
       memory: "A ₹100 shirt goes up 10% to ₹110, then down 10% of 110, which is ₹11. It ends at ₹99, not ₹100. The missing ₹1 is 1%."
     },
@@ -49,11 +49,11 @@
         "A markup and a discount multiply. They do not subtract."
       ],
       tricks: [
-        { skill: "gain-sp", name: "Price from a percent", body: "Gain of 20% means multiply CP by 1.20. Loss of 10% means divide SP by 0.90 to get CP." },
-        { skill: "discount", name: "Discount on the tag", body: "15% off ₹800 is 0.85 × 800 = ₹680. Never take the percent off the cost unless the question says so." },
-        { skill: "markup", name: "Mark up, then discount", body: "Up 25% then 20% off: ×1.25 × 0.80 = ×1.00. The tag looks generous and the sale is flat." },
-        { skill: "false-weight", name: "Short weight", body: "Selling 900 g as 1 kg at cost gains 100 g on 900 g, which is 11.11%." },
-        { skill: "same-sp", name: "Same selling price", body: "Two sales at the same price, +r% and −r%, lose r²/100 percent overall. 20 and 20 lose 4%." }
+        { skill: "gain-sp", name: "Percent on cost", body: "Always: profit and loss percents use cost price. SP = CP × (100 ± r) / 100. To recover cost, divide, do not subtract." },
+        { skill: "discount", name: "Percent on the tag", body: "Always: discount percent uses marked price, never cost, unless the question says otherwise. SP = MP × (100 − d) / 100." },
+        { skill: "markup", name: "Markup then discount", body: "Always: multiply the factors. Up m% then discount d% is ×(1+m/100)×(1−d/100). Two discounts a% and b% equal one discount of a+b−ab/100." },
+        { skill: "false-weight", name: "Short weight", body: "Always, when the sale is at cost price: profit% = (true weight − false weight) / false weight × 100." },
+        { skill: "same-sp", name: "Same selling price", body: "Always: one gain of r% and one loss of r% at the same selling price is a loss of r²/100 % on the two together." }
       ],
       memory: "Think of the shop tag as a second number. Cost is the floor. The tag is painted above it. The discount cuts the tag, not the floor."
     },
@@ -68,11 +68,11 @@
         "For 2 years, CI − SI = P × (R/100)²."
       ],
       tricks: [
-        { skill: "si", name: "The rectangle", body: "Principal × rate × years, then cut two zeros. 2500 × 8 × 3 / 100 = 600." },
-        { skill: "ci", name: "Two-year compound", body: "10% for 2 years is ×1.1 × 1.1 = ×1.21. On ₹5000 the interest is ₹1050, not ₹1000." },
-        { skill: "ci-si", name: "The gap", body: "The 2-year gap is interest on the first year's interest: P × (R/100)². At 5% on ₹4000 that gap is ₹10." },
-        { skill: "double", name: "Doubling at simple interest", body: "To double, you need 100% interest. Rate × years = 100. In 8 years the rate is 12.5%." },
-        { skill: "half-year", name: "Half-yearly compounding", body: "Halve the rate and double the number of periods. 20% for 1 year, half-yearly, is two steps of 10%: ×1.21." }
+        { skill: "si", name: "Simple interest", body: "Always: SI = P × R × T / 100. The slice is the same every year, so the amount is a straight line." },
+        { skill: "ci", name: "Compound amount", body: "Always, for yearly compounding: amount = P × (1 + R/100)^T. Interest is amount minus principal." },
+        { skill: "ci-si", name: "Two-year gap", body: "Always, for two yearly compounds: CI − SI = P × (R/100)². For three years multiply that gap by (3 + R/100)." },
+        { skill: "double", name: "Doubling", body: "Always at simple interest: the sum doubles when R × T = 100. It triples when R × T = 200." },
+        { skill: "half-year", name: "Half-yearly", body: "Always when interest is compounded half-yearly: use R/2 as the rate and 2T as the number of steps." }
       ],
       memory: "Simple interest is a stack of equal coins. Compound interest is a stack where each new coin is a photo of the whole stack so far."
     },
@@ -87,12 +87,12 @@
         "Towards each other, add speeds. Same direction, subtract them."
       ],
       tricks: [
-        { skill: "dst", name: "45 minutes is 3/4", body: "72 km/h for 45 minutes is 72 × 3/4 = 54 km. Convert minutes before multiplying." },
-        { skill: "convert", name: "54 km/h", body: "54 × 5/18 = 15 m/s. A train at 54 km/h covers 15 metres each second." },
-        { skill: "average-speed", name: "Harmonic average", body: "Same road both ways at 30 and 60 averages 40, not 45. The slow leg takes longer, so it counts more." },
-        { skill: "train", name: "Passing a pole", body: "A pole is a point. Time = train length / speed. 150 m at 60 km/h (50/3 m/s) takes 9 seconds." },
-        { skill: "boats", name: "Boat and stream", body: "Boat = (down + up) / 2. Stream = (down − up) / 2. Down 16 and up 10 means boat 13, stream 3." },
-        { skill: "meet", name: "Closing the gap", body: "Relative speed is the sum when they face each other. 180 km at 40 + 50 closes in 2 hours." }
+        { skill: "dst", name: "Distance", body: "Always: distance = speed × time, after the units match. 45 minutes is 3/4 of an hour, not 45." },
+        { skill: "convert", name: "km/h and m/s", body: "Always: km/h × 5/18 = m/s, and m/s × 18/5 = km/h. 54 km/h is 15 m/s." },
+        { skill: "average-speed", name: "Equal distance", body: "Always when the two distances are equal: average speed = 2ab/(a+b). The ordinary mean (a+b)/2 is for equal times, not equal roads." },
+        { skill: "train", name: "Passing a pole or a platform", body: "Always: a pole uses the train's own length. A platform or another train adds that length too. Time = distance ÷ speed in m/s." },
+        { skill: "boats", name: "Boat and stream", body: "Always: boat = (downstream + upstream) / 2, stream = (downstream − upstream) / 2." },
+        { skill: "meet", name: "Relative speed", body: "Always: towards each other, add the speeds. Same direction, subtract them. Time = gap ÷ relative speed." }
       ],
       memory: "Average speed hides in the clock, not the speedometer. The hour you crawl counts as much as the hour you fly."
     },
@@ -107,12 +107,12 @@
         "People and days move in opposite directions when the job stays the same."
       ],
       tricks: [
-        { skill: "together", name: "Two workers", body: "A in a days, B in b days: together ab/(a+b). 12 and 18 give 36/5 = 7.2 days." },
-        { skill: "one-left", name: "Find the missing worker", body: "If A + B is 6 days and A is 10, B's rate is 1/6 − 1/10 = 1/15. B needs 15 days." },
-        { skill: "pipes", name: "A pipe and a leak", body: "Fill in a, empty in b, b > a: time = ab/(b − a). 4 and 6 give 12 hours." },
-        { skill: "men-days", name: "More hands, fewer days", body: "Men × days stays constant. 15 men × 20 days = 10 men × 30 days." },
-        { skill: "efficiency", name: "Percent more efficient", body: "50% more efficient is a rate ratio 3:2, so times are 2:3. If B needs 15 days, A needs 10." },
-        { skill: "partial", name: "Someone starts, someone finishes", body: "Subtract the fraction already done. 6 of 24 days is 1/4. The remaining 3/4 in 9 days means a full job in 12 days." }
+        { skill: "together", name: "Two workers", body: "Always: rates add. A in a days and B in b days finish together in ab/(a+b) days." },
+        { skill: "one-left", name: "Missing rate", body: "Always: the missing rate is the difference of the known rates. 1/together − 1/A = 1/B." },
+        { skill: "pipes", name: "Tap and leak", body: "Always: a leak is a negative rate. If the tap fills in a and the leak empties in b, with b > a, the tank fills in ab/(b−a)." },
+        { skill: "men-days", name: "Hands and days", body: "Always, for the same job and the same hours per day: men × days stays constant." },
+        { skill: "efficiency", name: "Efficiency and time", body: "Always: time is the reverse of efficiency. 50% more efficient is the ratio 3:2, so the times are 2:3." },
+        { skill: "partial", name: "Part of the job", body: "Always: fraction done = days worked / days needed alone. What is left is 1 minus that fraction." }
       ],
       memory: "A tank has a tap pouring in and a hole pouring out. Draw both arrows. The water moves at the difference."
     },
@@ -127,12 +127,12 @@
         "A heavier quantity pulls the mean closer to itself."
       ],
       tricks: [
-        { skill: "plain-avg", name: "Add, then divide", body: "18, 22, 26, 30 sit evenly around 24. Sum 96, count 4, average 24." },
-        { skill: "remove", name: "Remove one value", body: "8 numbers average 15, sum 120. Seven average 14, sum 98. The one removed is 22." },
-        { skill: "join", name: "Someone joins the group", body: "19 students average 15. With the teacher, 20 people average 16. Teacher = 320 − 285 = 35." },
-        { skill: "alligation", name: "Alligation cross", body: "Cheaper 60, dearer 90, mean 70. Ratio cheaper:dearer = (90−70):(70−60) = 2:1." },
-        { skill: "innings", name: "The next score", body: "10 innings average 46, sum 460. After 11, average 48, sum 528. The 11th innings is 68." },
-        { skill: "weighted", name: "Weighted mean", body: "4 kg at 25 and 6 kg at 40. Total value 340, total weight 10, mean 34." }
+        { skill: "plain-avg", name: "Sum", body: "Always: sum = average × count. Change the sum first, then divide again." },
+        { skill: "remove", name: "One value leaves", body: "Always: removed value = old sum − new sum. New sum = new average × new count." },
+        { skill: "join", name: "One value joins", body: "Always: the newcomer = new sum − old sum. Both sums are average × count." },
+        { skill: "alligation", name: "Alligation", body: "Always, when the mean sits strictly between the two prices: cheaper:dearer = (dearer − mean):(mean − cheaper)." },
+        { skill: "innings", name: "The next score", body: "Always: the next score = new sum − old sum. If the average of n rises by x, the new item is old item + n×x." },
+        { skill: "weighted", name: "Weighted mean", body: "Always: mean = (value × weight, added up) / (weights added up)." }
       ],
       memory: "The mean is the balance point of a seesaw. A price far from the middle needs less weight to balance one that sits close."
     },
@@ -147,12 +147,12 @@
         "LCM takes the highest power of each prime. HCF takes the lowest."
       ],
       tricks: [
-        { skill: "div9", name: "Digit sum for 9", body: "Add the digits. If that sum is a multiple of 9, so is the number. 4626 → 18 → yes." },
-        { skill: "unit", name: "Unit-digit cycles", body: "2^n cycles 2, 4, 8, 6. The 15th power sits at position 3 of that cycle, so the unit digit is 8." },
-        { skill: "lcm", name: "LCM from primes", body: "8 = 2³, 12 = 2²×3, 18 = 2×3². LCM = 2³×3² = 72." },
-        { skill: "hcf", name: "HCF from primes", body: "84 = 2²×3×7 and 126 = 2×3²×7. Shared is 2×3×7 = 42." },
-        { skill: "remainder", name: "Same remainder", body: "Remainder 3 for 4, 5, and 6 means LCM(4,5,6) + 3 = 63." },
-        { skill: "square", name: "Square near a ten", body: "(30+5)² = 30² + 2×30×5 + 5² = 900 + 300 + 25 = 1225." }
+        { skill: "div9", name: "Digit sum", body: "Always: a number is divisible by 9 exactly when its digit sum is. The same test with 3 uses a digit sum divisible by 3." },
+        { skill: "unit", name: "Unit-digit cycle", body: "Always for whole-number powers: the unit digit repeats. 2 goes 2,4,8,6. Position is the exponent mod 4, and a remainder of 0 means the 4th digit." },
+        { skill: "lcm", name: "LCM", body: "Always: take the highest power of every prime that appears. That product is the least common multiple." },
+        { skill: "hcf", name: "HCF", body: "Always: take the lowest power of every prime that appears in both. That product is the highest common factor." },
+        { skill: "remainder", name: "Same remainder", body: "Always: if the remainder is the same for several divisors, the number is (LCM of the divisors) × k + remainder." },
+        { skill: "square", name: "Square ending in 5", body: "Always for a number 10a+5: the square is a×(a+1), then the digits 25. 35² → 3×4 = 12, so 1225. The identity (a+b)² = a²+2ab+b² holds for every a and b." }
       ],
       memory: "The last digit of powers of 2 drums 2-4-8-6 and then repeats, like a four-beat loop."
     },
@@ -187,12 +187,12 @@
         "Alternating series apply one rule, then another, then the first again."
       ],
       tricks: [
-        { skill: "product", name: "n × (n+1)", body: "2, 6, 12, 20, 30 are 1×2, 2×3, 3×4, 4×5, 5×6. Next is 6×7 = 42." },
-        { skill: "times", name: "Multiply by a constant", body: "4, 12, 36, 108 each multiply by 3. Next is 324." },
-        { skill: "cubes", name: "Cubes in a line", body: "1, 8, 27, 64 are 1³ through 4³. Next is 5³ = 125." },
-        { skill: "second-diff", name: "Jumps that grow", body: "6, 11, 21, 36, 56 jump by 5, 10, 15, 20. Next jump is 25, so 81." },
-        { skill: "alternate", name: "Two-step dance", body: "×2, then −4, and repeat. From 40 the next step is −4, so 36." },
-        { skill: "odd-one", name: "The odd one out", body: "8, 27, 64, 125 are cubes. 100 is only a square. The stranger is 100." }
+        { skill: "product", name: "Check every term", body: "No series shortcut fits every question. Always write the jumps and keep a rule only if it fits every given term. Here the terms are n(n+1)." },
+        { skill: "times", name: "Constant multiplier", body: "Keep a ×k rule only after it fits every step you were given. Here each step is ×3." },
+        { skill: "cubes", name: "Known lists", body: "Squares and cubes are worth knowing because they repeat: 1, 8, 27, 64, 125, 216. A list still has to match every term." },
+        { skill: "second-diff", name: "Jumps of the jumps", body: "Always start with the first jumps. If those jumps themselves rise by a constant, the next jump is fixed. Confirm it on every term." },
+        { skill: "alternate", name: "Two rules taking turns", body: "Use this only when odd steps follow one rule and even steps follow another, and both rules survive every term shown." },
+        { skill: "odd-one", name: "The stranger", body: "The odd one out is the term that breaks the rule the others all share. Test the rule on every number, not just the last." }
       ],
       memory: "Do not stare at the terms. Stare at the gaps. If the gaps make a pattern you already know, the series is finished."
     }
@@ -274,5 +274,22 @@
     return { id: id, chapter: chapter, skill: skill, prompt: prompt, choices: choices, answer: answer, steps: steps };
   }
 
-  window.AptitudeCourse = { chapters: chapters, questions: questions };
+  var always = [
+    "x% of y = y% of x.",
+    "a% then b% changes the value by a + b + ab/100. A fall is negative.",
+    "If A is x% more than B, B is 100x/(100+x) % less than A.",
+    "Profit and loss use cost price. Discount uses marked price.",
+    "Same selling price, +r% and −r%, loses r²/100 % overall.",
+    "Equal distances at speeds a and b average 2ab/(a+b). Equal times use (a+b)/2.",
+    "km/h × 5/18 = m/s.",
+    "Towards each other, add speeds. Same direction, subtract.",
+    "Boat = (down + up) / 2. Stream = (down − up) / 2.",
+    "Two people in a and b days finish together in ab/(a+b).",
+    "A tap in a hours and a leak in b hours, b > a, fill the tank in ab/(b − a).",
+    "Two-year CI − SI = P × (R/100)² when compounding is yearly.",
+    "Cheaper : dearer = (dearer − mean) : (mean − cheaper), with the mean strictly between them.",
+    "A number is divisible by 9 exactly when its digits add to a multiple of 9."
+  ];
+
+  window.AptitudeCourse = { chapters: chapters, questions: questions, always: always };
 })();

@@ -79,9 +79,18 @@ h2 { font-size: 1.25rem; margin: 1.4rem 0 0.5rem; }
   background: var(--board);
   color: var(--teal-ink);
   border-radius: 16px;
-  padding: 1rem;
-  margin: 0.5rem 0 1rem;
+  padding: 0.8rem 0.8rem 0.4rem;
+  margin: 0 0 1rem;
 }
+.thumb {
+  background: var(--board);
+  border-radius: 12px;
+  margin: 0 0 0.7rem;
+  padding: 0.2rem 0.3rem 0;
+}
+.fig { width: 100%; height: auto; display: block; }
+.thumb .fig { max-height: 120px; }
+.stage .fig { min-height: 180px; }
 .slider { display: grid; grid-template-columns: 9rem 1fr auto; gap: 0.6rem; align-items: center; margin: 0.35rem 0; }
 .slider-value { min-width: 2.2rem; color: var(--chalk); }
 .readout { color: var(--chalk); min-height: 2.6rem; }

@@ -2,6 +2,8 @@
 
 Open the hosted site at https://lavprasad.github.io/internetIDEA/ or `aptitude/index.html` locally.
 
+Each chapter card, each lesson, and each practice question shows a picture. Move the sliders on a lesson. The home page lists the shortcuts that hold for every question of that kind.
+
 - **Lesson** on a chapter: notes, tricks, a memory line, and a picture with sliders.
 - **Practice** on a chapter: six questions from that chapter.
 - **Practice weak spots**: more questions from the skills you have missed most.
