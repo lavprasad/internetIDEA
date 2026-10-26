@@ -62,7 +62,7 @@
     root.append(h("h1", "", "Clear the paper"));
     root.append(h("p", "lede", "Ten chapters. Every lesson and every question has a picture. The shortcuts below are identities: they hold for every question of that kind."));
 
-    var rules = h("section", "card");
+    var rules = h("section", "card rules");
     rules.append(h("h2", "", "Shortcuts that always hold"));
     var list = document.createElement("ul");
     course.always.forEach(function (line) {
@@ -103,7 +103,7 @@
       window.AptitudeVisuals.thumb(chapter.id, thumb);
       card.append(thumb);
       card.append(h("h2", "", chapter.title));
-      card.append(h("p", "", chapter.blurb));
+      card.append(h("p", "blurb", chapter.blurb));
       var meter = h("div", "meter");
       var fill = h("span");
       fill.style.width = report.accuracy == null ? "0%" : Math.round(report.accuracy * 100) + "%";

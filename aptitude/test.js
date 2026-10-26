@@ -59,7 +59,7 @@ course.chapters.forEach(function (chapter) {
   chapter.tricks.forEach(function (item) { skills[chapter.id + ":" + item.skill] = true; });
 });
 assert.equal(course.chapters.length, 10);
-assert.equal(course.questions.length, 60);
+assert.equal(course.questions.length, 100);
 course.questions.forEach(function (question) {
   assert.ok(question.choices.indexOf(question.answer) !== -1, question.id + " answer not in choices");
   assert.ok(skills[question.chapter + ":" + question.skill], question.id + " missing trick");

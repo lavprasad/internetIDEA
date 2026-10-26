@@ -267,7 +267,57 @@
     q("e3", "series", "cubes", "1, 8, 27, 64, ?", ["100", "125", "144", "216"], "125", ["1³, 2³, 3³, 4³.", "Next is 5³ = 125."]),
     q("e4", "series", "second-diff", "6, 11, 21, 36, 56, ?", ["71", "76", "81", "86"], "81", ["Jumps: 5, 10, 15, 20.", "Next jump is 25. 56 + 25 = 81."]),
     q("e5", "series", "alternate", "8, 16, 12, 24, 20, 40, ?", ["32", "36", "44", "48"], "36", ["The dance is ×2, then −4.", "40 − 4 = 36."]),
-    q("e6", "series", "odd-one", "Which number does not belong: 8, 27, 64, 100, 125?", ["8", "27", "64", "100"], "100", ["8, 27, 64 and 125 are cubes.", "100 is not a cube."])
+    q("e6", "series", "odd-one", "Which number does not belong: 8, 27, 64, 100, 125?", ["8", "27", "64", "100"], "100", ["8, 27, 64 and 125 are cubes.", "100 is not a cube."]),
+
+    q("p7", "percent", "fraction-percent", "What is 1/6 as a percent, to two decimals?", ["15%", "16.67%", "18%", "20%"], "16.67%", ["1/6 = 0.1666…", "That is 16.67%."]),
+    q("p8", "percent", "of-swap", "What is 15% of 80?", ["10", "12", "15", "18"], "12", ["10% of 80 is 8.", "5% is 4, so 15% is 12."]),
+    q("p9", "percent", "successive", "A value rises 20% and then rises another 10%. What is the net percent increase?", ["30%", "32%", "22%", "28%"], "32%", ["20 + 10 + (20×10)/100 = 32.", "The extra 2 comes from 10% of the first rise."]),
+    q("p10", "percent", "compare", "A is 20% less than B. B is what percent more than A?", ["20%", "25%", "16%", "30%"], "25%", ["Let B = 100. Then A = 80.", "The gap is 20 on 80, which is 25%."]),
+
+    q("r7", "ratio", "split", "360 is split in the ratio 1:2:3. What is the middle share?", ["60", "120", "180", "90"], "120", ["1 + 2 + 3 = 6 parts.", "One part = 60. The middle share is 120."]),
+    q("r8", "ratio", "chain", "a:b = 3:4 and b:c = 2:5. What is a:c?", ["3:10", "3:5", "6:5", "2:5"], "3:10", ["Keep b as 4. Then c = 10.", "a:c = 3:10."]),
+    q("r9", "ratio", "ages", "Two ages are in the ratio 4:3 and sum to 42. What is the younger age?", ["16", "18", "21", "24"], "18", ["7 parts = 42, so one part is 6.", "The younger is 3 parts, 18."]),
+    q("r10", "ratio", "partnership", "A invests 5000 for 4 months. B invests 2000 for 10 months. What is the profit ratio A:B?", ["5:2", "1:1", "2:5", "4:5"], "1:1", ["A: 5000 × 4 = 20000.", "B: 2000 × 10 = 20000."]),
+
+    q("f7", "profit", "gain-sp", "Cost price is 80 and the gain is 25%. What is the selling price?", ["90", "100", "105", "120"], "100", ["25% of 80 is 20.", "Selling price = 100."]),
+    q("f8", "profit", "markup", "A tag of 200 gets two successive discounts of 10% each. What is the selling price?", ["160", "162", "170", "180"], "162", ["10% then 10% is not 20%.", "200 × 0.9 × 0.9 = 162."]),
+    q("f9", "profit", "false-weight", "A seller gives 800 g for a kilogram and charges the cost price. What is the profit percent?", ["20%", "25%", "16%", "30%"], "25%", ["Profit% = (1000 − 800) / 800 × 100.", "200/800 = 25%."]),
+    q("f10", "profit", "same-sp", "Two items are sold at the same price. One gains 10% and the other loses 10%. What is the net result?", ["1% loss", "1% gain", "no change", "10% loss"], "1% loss", ["Same price with +r% and −r% loses r²/100 %.", "Here r = 10, so the loss is 1%."]),
+
+    q("i7", "interest", "si", "Simple interest on 1500 at 12% for 2 years is:", ["300", "360", "380", "450"], "360", ["1500 × 12 × 2 / 100.", "15 × 24 = 360."]),
+    q("i8", "interest", "ci", "Compound interest on 2000 at 10% for 2 years, compounded yearly, is:", ["400", "420", "440", "484"], "420", ["Amount factor for two years at 10% is 1.21.", "Interest = 2000 × 0.21 = 420."]),
+    q("i9", "interest", "double", "A sum doubles in 5 years at simple interest. What is the yearly rate?", ["15%", "20%", "25%", "10%"], "20%", ["Doubling needs R × T = 100.", "R = 100/5 = 20%."]),
+    q("i10", "interest", "ci-si", "For 10000 at 10% compounded yearly, how much more is the 2-year compound interest than the simple interest?", ["50", "100", "200", "210"], "100", ["Gap = P × (R/100)².", "10000 × 0.01 = 100."]),
+
+    q("s7", "speed", "dst", "A bus runs at 40 km/h for 90 minutes. How far does it go?", ["40 km", "50 km", "60 km", "80 km"], "60 km", ["90 minutes = 1.5 hours.", "40 × 1.5 = 60 km."]),
+    q("s8", "speed", "convert", "36 km/h is how many metres per second?", ["8", "10", "12", "15"], "10", ["36 × 5/18 = 10.", "The train covers 10 metres each second."]),
+    q("s9", "speed", "average-speed", "Equal distances are covered at 20 km/h and 30 km/h. What is the average speed?", ["24 km/h", "25 km/h", "26 km/h", "28 km/h"], "24 km/h", ["2×20×30 / (20+30) = 1200/50.", "The average is 24 km/h."]),
+    q("s10", "speed", "meet", "Two cyclists are 100 km apart and ride toward each other at 30 and 20 km/h. When do they meet?", ["1 h", "2 h", "2.5 h", "5 h"], "2 h", ["Closing speed = 50 km/h.", "100/50 = 2 hours."]),
+
+    q("w7", "work", "together", "A finishes in 10 days and B in 15 days. How long do they take together?", ["5 days", "6 days", "8 days", "12 days"], "6 days", ["10×15 / (10+15) = 150/25.", "Together they take 6 days."]),
+    q("w8", "work", "pipes", "A tap fills a tank in 3 hours. A leak empties it in 6 hours. With both open, how long to fill?", ["4 h", "5 h", "6 h", "9 h"], "6 h", ["Time = 3×6 / (6−3).", "18/3 = 6 hours."]),
+    q("w9", "work", "men-days", "12 people finish a job in 15 days. How many days do 18 people need?", ["8", "10", "12", "20"], "10", ["12 × 15 = 18 × days.", "Days = 180/18 = 10."]),
+    q("w10", "work", "efficiency", "A is twice as efficient as B. Together they finish in 8 days. How long does A take alone?", ["10 days", "12 days", "16 days", "24 days"], "12 days", ["Rates 2:1, so A does 2/3 of the daily work.", "2/3 of a job per 8 days means A alone needs 12 days."]),
+
+    q("v7", "average", "plain-avg", "What is the average of 5, 10, 15 and 20?", ["10", "12.5", "15", "12"], "12.5", ["Sum = 50.", "50/4 = 12.5."]),
+    q("v8", "average", "remove", "Five numbers average 20. After one is removed, the average of the rest is 18. What was removed?", ["22", "24", "26", "28"], "28", ["Old sum = 100. New sum = 72.", "Removed = 28."]),
+    q("v9", "average", "alligation", "Prices 30 and 50 are mixed to a mean of 35. What is cheaper:dearer?", ["3:1", "1:3", "2:1", "5:1"], "3:1", ["(50−35):(35−30) = 15:5.", "That is 3:1."]),
+    q("v10", "average", "weighted", "2 kg at 10 per kg is mixed with 3 kg at 20 per kg. What is the mean price?", ["14", "15", "16", "18"], "16", ["Value = 20 + 60 = 80.", "80/5 = 16."]),
+
+    q("n7", "numbers", "div9", "Which of these is divisible by 9?", ["3815", "3816", "3817", "3818"], "3816", ["3+8+1+6 = 18.", "18 is a multiple of 9."]),
+    q("n8", "numbers", "unit", "What is the unit digit of 7^4?", ["3", "7", "9", "1"], "1", ["Powers of 7 end in 7, 9, 3, 1 and then repeat.", "The 4th place in that loop is 1."]),
+    q("n9", "numbers", "lcm", "What is the LCM of 6 and 8?", ["12", "16", "24", "48"], "24", ["6 = 2×3 and 8 = 2³.", "LCM = 2³×3 = 24."]),
+    q("n10", "numbers", "square", "What is 75²?", ["5525", "5625", "5725", "4925"], "5625", ["75 = 10×7 + 5.", "7×8 = 56, then write 25: 5625."]),
+
+    q("c7", "chance", "die", "A fair die is rolled. What is the probability of rolling a 1?", ["1/6", "1/3", "1/2", "1/4"], "1/6", ["One face out of six.", "The probability is 1/6."]),
+    q("c8", "chance", "bag", "A bag has 5 red and 5 blue marbles. What is the probability of drawing red?", ["1/5", "2/5", "1/2", "3/5"], "1/2", ["5 red out of 10.", "5/10 = 1/2."]),
+    q("c9", "chance", "dice-sum", "Two fair dice are rolled. What is the probability that the sum is 7?", ["1/12", "1/9", "1/6", "1/4"], "1/6", ["Six outcomes out of 36.", "6/36 = 1/6."]),
+    q("c10", "chance", "cards", "One card is drawn from a 52-card deck. What is the probability it is an ace or a king?", ["1/13", "2/13", "1/26", "1/4"], "2/13", ["4 aces and 4 kings make 8 cards.", "8/52 = 2/13."]),
+
+    q("e7", "series", "product", "3, 8, 15, 24, ?", ["30", "33", "35", "36"], "35", ["These are 1×3, 2×4, 3×5, 4×6.", "Next is 5×7 = 35."]),
+    q("e8", "series", "times", "5, 10, 20, 40, ?", ["60", "70", "80", "100"], "80", ["Each term doubles.", "40 × 2 = 80."]),
+    q("e9", "series", "cubes", "8, 27, 64, 125, ?", ["150", "196", "216", "250"], "216", ["These are 2³, 3³, 4³, 5³.", "Next is 6³ = 216."]),
+    q("e10", "series", "second-diff", "2, 3, 6, 11, 18, ?", ["25", "27", "29", "31"], "27", ["Jumps: 1, 3, 5, 7.", "The next jump is 9, and 18 + 9 = 27."])
   ];
 
   function q(id, chapter, skill, prompt, choices, answer, steps) {

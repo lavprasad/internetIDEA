@@ -6,5 +6,9 @@
 ## 2026-10-26 — pictures and identities
 - `node test.js` in `aptitude/` — content still matches its checks after the shortcut rewrite
 
+## 2026-10-26 — more questions and spacing
+- `node test.js` in `aptitude/` — 100 questions, each answer still in its choices
+
+
 ## 2026-10-26 — GitHub Pages
 - `gh api --method POST /repos/lavprasad/internetIDEA/pages` — publish `main` at the site root
