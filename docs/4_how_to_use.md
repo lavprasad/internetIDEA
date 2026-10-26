@@ -1,6 +1,6 @@
 # How to use
 
-Open `aptitude/index.html` in a browser.
+Open the hosted site at https://lavprasad.github.io/internetIDEA/ or `aptitude/index.html` locally.
 
 - **Lesson** on a chapter: notes, tricks, a memory line, and a picture with sliders.
 - **Practice** on a chapter: six questions from that chapter.
