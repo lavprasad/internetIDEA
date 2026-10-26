@@ -1,11 +1,14 @@
 # internetIDEA
 
-Ten single-purpose tools that run in the browser. Nothing is uploaded. Each app stores its own data in `localStorage` on this device.
+A local aptitude course and ten single-purpose tools. Nothing is uploaded. Each app stores its own data in `localStorage` on this device.
 
-Open `index.html`, or open an app folder and run `node test.js` for the calculation checks.
+Open `index.html`. For the course, open `aptitude/index.html`. Run `node test.js` inside an app folder for its checks.
+
+The course tracks which skills you miss and asks more of those.
 
 | App | What it is |
 | --- | --- |
+| aptitude | Chapters, tricks, moving lessons, and practice aimed at missed skills |
 | shelf | Expiry dates, including “use within N days of opening” |
 | streak | Habit check-ins and consecutive-day streaks |
 | block | Focus timer (25 / 5 / 15, or a custom length) |
