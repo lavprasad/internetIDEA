@@ -51,7 +51,9 @@ assert.equal(none, null);
 
 var fs = require("fs");
 var vm = require("vm");
-var sandbox = { window: {} };
+var sandbox = { window: {}, module: { exports: {} }, exports: {} };
+vm.runInNewContext(fs.readFileSync(__dirname + "/bank.js", "utf8"), sandbox);
+sandbox.window.AptitudeBank = sandbox.module.exports;
 vm.runInNewContext(fs.readFileSync(__dirname + "/content.js", "utf8"), sandbox);
 var course = sandbox.window.AptitudeCourse;
 var skills = {};
@@ -59,11 +61,15 @@ course.chapters.forEach(function (chapter) {
   chapter.tricks.forEach(function (item) { skills[chapter.id + ":" + item.skill] = true; });
 });
 assert.equal(course.chapters.length, 10);
-assert.equal(course.questions.length, 100);
+var counts = {};
 course.questions.forEach(function (question) {
+  counts[question.chapter] = (counts[question.chapter] || 0) + 1;
   assert.ok(question.choices.indexOf(question.answer) !== -1, question.id + " answer not in choices");
   assert.ok(skills[question.chapter + ":" + question.skill], question.id + " missing trick");
   assert.ok(question.steps.length >= 2, question.id + " needs steps");
+});
+course.chapters.forEach(function (chapter) {
+  assert.ok(counts[chapter.id] >= 100, chapter.id + " has " + counts[chapter.id]);
 });
 
 console.log("aptitude logic tests passed");

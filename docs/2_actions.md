@@ -15,3 +15,8 @@
 
 - Each chapter now has 10 questions, 100 in total.
 - Increased page, card, and button padding. Sliders stay on one row, with the value in a small pill.
+
+## 2026-10-26 — 100 questions each
+
+- Added `aptitude/bank.js`. Each chapter now has 110 questions: 10 written by hand and 100 generated from the chapter formulas.
+- Every generated answer is checked against its formula before it is shown.

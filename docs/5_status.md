@@ -1,6 +1,6 @@
 # Status
 
-Done. The aptitude course is usable from `aptitude/index.html` and from https://lavprasad.github.io/internetIDEA/. Each chapter has 10 questions.
+Done. The aptitude course is usable from `aptitude/index.html` and from https://lavprasad.github.io/internetIDEA/. Each of the ten chapters has 110 questions.
 
 Chapters: percentages, ratio, profit and loss, interest, speed, work, averages, numbers, probability, series.
 

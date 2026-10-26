@@ -341,5 +341,6 @@
     "A number is divisible by 9 exactly when its digits add to a multiple of 9."
   ];
 
-  window.AptitudeCourse = { chapters: chapters, questions: questions, always: always };
+  var generated = (typeof window !== "undefined" && window.AptitudeBank) ? window.AptitudeBank.generate() : [];
+  window.AptitudeCourse = { chapters: chapters, questions: questions.concat(generated), always: always };
 })();
