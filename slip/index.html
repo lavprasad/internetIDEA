@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="sheet" id="app">
+    <header class="sheet-head">
+      <h1>Invoice</h1>
+      <div class="actions no-print">
+        <button type="button" id="save">Save</button>
+        <button type="button" id="print">Print</button>
+      </div>
+    </header>
+    <hr class="rule">
+    <p id="error" class="error no-print" role="alert"></p>
+
+    <div class="parties">
+      <label class="field">From
+        <textarea id="from" rows="4" autocomplete="off"></textarea>
+      </label>
+      <label class="field">Bill to
+        <textarea id="to" rows="4" autocomplete="off"></textarea>
+      </label>
+    </div>
+
+    <div class="meta">
+      <label class="field">Invoice number
+        <input id="number" type="text" autocomplete="off">
+      </label>
+      <label class="field">Date
+        <input id="date" type="date">
+      </label>
+      <label class="field">Tax %
+        <input id="tax" type="number" min="0" step="any" inputmode="decimal">
+      </label>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th class="num">Qty</th>
+          <th class="num">Rate</th>
+          <th class="num">Amount</th>
+          <th class="no-print">Remove</th>
+        </tr>
+      </thead>
+      <tbody id="lines"></tbody>
+    </table>
+    <p class="no-print add-row"><button type="button" id="add">Add line</button></p>
+
+    <dl class="totals">
+      <div><dt>Subtotal</dt><dd id="subtotal">—</dd></div>
+      <div><dt>Tax</dt><dd id="tax-amt">—</dd></div>
+      <div class="grand"><dt>Total</dt><dd id="total">—</dd></div>
+    </dl>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

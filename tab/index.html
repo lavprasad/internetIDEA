@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Tab</h1>
+      <p>Split a restaurant bill so the cents add up exactly.</p>
+    </header>
+    <form id="bill" autocomplete="off">
+      <div class="card fields">
+        <label>
+          <span>Subtotal</span>
+          <input id="subtotal" inputmode="decimal" autocomplete="off">
+        </label>
+        <label>
+          <span>Tax %</span>
+          <input id="tax" inputmode="decimal" autocomplete="off" value="0">
+        </label>
+        <label>
+          <span>Tip %</span>
+          <input id="tip" inputmode="decimal" autocomplete="off" value="0">
+        </label>
+      </div>
+      <div class="card">
+        <h2>People</h2>
+        <div id="people"></div>
+        <button type="button" id="add">Add person</button>
+      </div>
+      <button type="submit" id="split" class="primary">Split</button>
+      <p id="error" role="alert" hidden></p>
+    </form>
+    <section id="result" class="card" hidden>
+      <h2>Bill</h2>
+      <div id="breakdown"></div>
+      <h2>Each person</h2>
+      <div id="each"></div>
+    </section>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

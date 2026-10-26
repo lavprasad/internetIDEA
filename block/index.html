@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Block</h1>
+    <p class="lede">Focus timer. Counts stay in this browser. The countdown does not.</p>
+
+    <div class="modes" role="group" aria-label="Mode">
+      <button type="button" id="mode-focus" aria-pressed="true">Focus</button>
+      <button type="button" id="mode-short" aria-pressed="false">Short break</button>
+      <button type="button" id="mode-long" aria-pressed="false">Long break</button>
+    </div>
+
+    <p id="time" class="time">25:00</p>
+
+    <div class="controls">
+      <button type="button" id="start" aria-pressed="false">Start</button>
+      <button type="button" id="reset">Reset</button>
+    </div>
+
+    <form id="custom-form" class="custom">
+      <label for="minutes">Custom minutes</label>
+      <input id="minutes" type="number" inputmode="numeric" min="1" max="120" step="1">
+      <button type="button" id="apply">Apply</button>
+      <p id="error" class="error" role="alert"></p>
+    </form>
+
+    <p id="suggestion" class="suggestion" aria-live="polite"></p>
+
+    <section class="log" aria-labelledby="log-heading">
+      <h2 id="log-heading">Today</h2>
+      <ul>
+        <li>Focus <strong id="count-focus">0</strong></li>
+        <li>Short <strong id="count-short">0</strong></li>
+        <li>Long <strong id="count-long">0</strong></li>
+      </ul>
+      <button type="button" id="clear">Clear log</button>
+    </section>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

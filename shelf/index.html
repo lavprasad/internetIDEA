@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shelf</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Shelf</h1>
+    <p class="lede">A local ledger of things that expire.</p>
+    <ul id="counts" aria-live="polite" aria-label="Counts"></ul>
+
+    <form id="add-form" novalidate>
+      <div class="field field-wide">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option value="food">Food</option>
+          <option value="medicine">Medicine</option>
+          <option value="document">Document</option>
+          <option value="household">Household</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="expiry">Expiry</label>
+        <input id="expiry" name="expiry" type="date">
+      </div>
+      <div class="field">
+        <label for="opened">Opened</label>
+        <input id="opened" name="opened" type="date">
+      </div>
+      <div class="field">
+        <label for="days-after-open">Days after open</label>
+        <input id="days-after-open" name="days-after-open" type="number" min="1" step="1" inputmode="numeric">
+      </div>
+      <div class="form-actions">
+        <button type="submit">Add</button>
+      </div>
+      <p id="form-error" role="alert"></p>
+    </form>
+
+    <section>
+      <h2>Active</h2>
+      <p id="empty">No active items.</p>
+      <ul id="active-list" aria-label="Active items"></ul>
+    </section>
+
+    <section>
+      <h2>History</h2>
+      <ul id="history-list" aria-label="Used and wasted"></ul>
+    </section>
+  </main>
+  <noscript>JavaScript is required. Data stays in this browser.</noscript>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

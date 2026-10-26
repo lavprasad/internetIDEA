@@ -1,0 +1,248 @@
+:root {
+  --bg: #1b1030;
+  --text: #fff8ee;
+  --pointer: #ff5d8f;
+  --slice-a: #ffb703;
+  --slice-b: #8ecae6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", sans-serif;
+  line-height: 1.4;
+}
+
+main {
+  width: min(880px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.75rem 0 3rem;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+.lede {
+  margin: 0 0 1.5rem;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stage {
+  text-align: center;
+}
+
+.wheel-wrap {
+  position: relative;
+  width: min(100%, 28rem);
+  margin: 0 auto;
+  padding-top: 1.55rem;
+}
+
+.pointer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
+  border-top: 22px solid var(--pointer);
+  transform: translateX(-50%);
+}
+
+#wheel {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: var(--bg);
+  border-radius: 50%;
+}
+
+.result {
+  min-height: 1.5em;
+  margin: 0.9rem 0 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#spin,
+form button {
+  border: 0;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+#spin {
+  padding: 0.7rem 1.8rem;
+  color: var(--bg);
+  background: var(--slice-a);
+}
+
+.panel {
+  padding: 1rem 1rem 1.25rem;
+  background: rgba(255, 248, 238, 0.04);
+  border: 1px solid rgba(255, 248, 238, 0.16);
+  border-radius: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.add-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  background: transparent;
+  border: 1px solid rgba(255, 248, 238, 0.45);
+  border-radius: 10px;
+}
+
+form button {
+  padding: 0.55rem 0.95rem;
+  color: var(--bg);
+  background: var(--pointer);
+}
+
+.remove {
+  flex: none;
+  padding: 0.3rem 0.7rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(255, 248, 238, 0.4);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.error {
+  min-height: 1.4em;
+  margin: 0.6rem 0;
+  color: var(--pointer);
+  font-weight: 700;
+}
+
+#option-list,
+#history {
+  margin: 0;
+  padding: 0;
+}
+
+#option-list {
+  list-style: none;
+}
+
+#option-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255, 248, 238, 0.12);
+}
+
+#option-list span,
+#history li {
+  overflow-wrap: anywhere;
+}
+
+#history {
+  padding-left: 1.25rem;
+}
+
+#history li {
+  padding: 0.3rem 0;
+}
+
+#history-empty {
+  margin: 0;
+  color: rgba(255, 248, 238, 0.72);
+}
+
+#history-empty[hidden] {
+  display: none;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--slice-a);
+  outline-offset: 3px;
+}
+
+@media (min-width: 391px) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.85fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .panel {
+    margin-top: 1.55rem;
+  }
+}
+
+@media (max-width: 390px) {
+  main {
+    width: calc(100% - 1.25rem);
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-row {
+    flex-direction: column;
+  }
+
+  form button,
+  #spin {
+    width: 100%;
+  }
+}

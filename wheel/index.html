@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Decision Wheel</h1>
+    <p class="lede">The winner is chosen before the spin. The wheel lands on that slice.</p>
+    <div class="layout">
+      <section class="stage" aria-label="Wheel">
+        <div class="wheel-wrap">
+          <div class="pointer" aria-hidden="true"></div>
+          <canvas id="wheel" width="560" height="560">This browser cannot draw the wheel.</canvas>
+        </div>
+        <p id="result" class="result" aria-live="polite"></p>
+        <button type="button" id="spin">Spin</button>
+      </section>
+      <section class="panel">
+        <h2>Options</h2>
+        <form id="add-form">
+          <label for="option-name">New option</label>
+          <div class="add-row">
+            <input id="option-name" name="option" maxlength="40" autocomplete="off">
+            <button type="submit">Add</button>
+          </div>
+        </form>
+        <p id="error" class="error" role="alert"></p>
+        <ul id="option-list"></ul>
+        <h2>Last results</h2>
+        <p id="history-empty">No spins yet.</p>
+        <ol id="history"></ol>
+      </section>
+    </div>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

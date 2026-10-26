@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Box breathing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Box breathing</h1>
+    <p class="intro">A phase set to 0 seconds is skipped.</p>
+
+    <div class="stage">
+      <div class="circle" aria-hidden="true"></div>
+      <p id="phase" class="phase">Ready</p>
+      <p id="seconds" class="seconds">&ndash;</p>
+      <p class="cycles">Cycles <span id="cycles">0</span></p>
+    </div>
+
+    <div class="row">
+      <button type="button" id="start">Start</button>
+      <button type="button" id="stop">Stop</button>
+    </div>
+    <p id="error" class="error" role="alert"></p>
+
+    <div class="fields">
+      <label for="inhale">Inhale
+        <input id="inhale" type="number" min="0" max="30" step="1" value="4" inputmode="numeric">
+      </label>
+      <label for="hold1">Hold
+        <input id="hold1" type="number" min="0" max="30" step="1" value="4" inputmode="numeric">
+      </label>
+      <label for="exhale">Exhale
+        <input id="exhale" type="number" min="0" max="30" step="1" value="4" inputmode="numeric">
+      </label>
+      <label for="hold2">Hold
+        <input id="hold2" type="number" min="0" max="30" step="1" value="4" inputmode="numeric">
+      </label>
+    </div>
+
+    <div class="row presets">
+      <button type="button" id="box">Box</button>
+      <button type="button" id="relax">4-7-8</button>
+    </div>
+  </main>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

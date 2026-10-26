@@ -1,0 +1,171 @@
+:root {
+  color-scheme: dark;
+  --bg: #6b1d2a;
+  --text: #fff6ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+main {
+  width: min(28rem, 100%);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.lede {
+  margin-top: 0.35rem;
+}
+
+.modes,
+.controls,
+.custom,
+.log ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.modes {
+  margin-top: 1.25rem;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.45rem 0.85rem;
+  background: transparent;
+  border: 2px solid var(--text);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+button[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--bg);
+}
+
+#start {
+  background: var(--text);
+  color: var(--bg);
+  min-width: 6.5rem;
+}
+
+#start[aria-pressed="true"] {
+  background: transparent;
+  color: var(--text);
+}
+
+.time {
+  margin: 0.75rem 0 1rem;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: clamp(4.25rem, 22vw, 7rem);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 1.25rem;
+}
+
+.custom {
+  margin-top: 0.25rem;
+}
+
+.custom label {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+input[type="number"] {
+  width: 5.5rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.55rem;
+  background: transparent;
+  border: 2px solid var(--text);
+  border-radius: 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.error,
+.suggestion {
+  flex-basis: 100%;
+  min-height: 1.4em;
+  text-align: center;
+}
+
+.error:empty,
+.suggestion:empty {
+  margin: 0;
+}
+
+.error:not(:empty) {
+  font-weight: 700;
+}
+
+.log {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.log h2 {
+  font-size: 1.1rem;
+}
+
+.log ul {
+  margin: 0.75rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.log li {
+  font-variant-numeric: tabular-nums;
+}
+
+.log strong {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 650;
+}
